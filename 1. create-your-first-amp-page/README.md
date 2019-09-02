@@ -1,5 +1,7 @@
 # Tutorial AMP
 
+## 1. Crie sua primeira página AMP
+
 1. Recomendado a utilização de protocolo HTTPS
 2. Os documentos HTML com amp devem:
 * Conter o doctype
@@ -28,3 +30,11 @@ Há casos em que é necessário ter a versão de uma página AMP e não AMP, com
 `<link rel="canonical" href="https://www.example.com/url/to/full/document.html">`
 
 **Observação:** Se você tiver apenas uma página e ela for AMP, deve-se criar um link apontando para ela.
+
+### Validando a página AMP
+Para validar se uma página AMP não contém erros basta seguir os seguintes passos:
+1. Abrir a página do navegador
+2. Adicionar `#development=1` no final da url
+3. Abrir o console do Chrome e verificar se há erros de validação
+
+---
