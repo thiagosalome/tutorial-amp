@@ -56,3 +56,35 @@ Os componentes em AMP tem as seguintes características:
 O sistema de componentes do AMP ajuda a criar rapidamente recursos eficientes e responsivos em suas páginas com o mínimo de esforço.  Existem componentes para criar formulários e carrosséis, para integrar a análise de páginas, para fazer solicitações XHR para servidores e muito mais. A lista completa de componentes pode ser vista [aqui](https://amp.dev/documentation/components/?format=websites)
 
 **Observação:** Quase todos os componentes AMP são executados por pelo menos algum JavaScript, sendo necessária a inclusão de uma tag de script separada. E há uma boa razão para isso: você inclui apenas os scripts que realmente usa no seu site. Há algumas exceções, como é o caso da tag `<amp-img>`, que já é incorporado no script de tempo de execução do AMP.
+
+## Encontrando o componente certo
+Uma maneira de encontrar o componente certo é utilizando a página de [referência de componentes AMP](https://amp.dev/documentation/components/?format=websites). Ele contém uma lista dos componentes suportados pelo AMP. Cada entrada do componente inclui o nome do componente e uma breve descrição de qual funcionalidade o componente fornece. Além desse há um link com os [exemplos](https://amp.dev/documentation/examples/?format=websites) de utilização de alguns componentes AMP.
+
+Os atributos no contexto do amp podem ser divididos em 3 tipos:
+* Atributos comuns a todos os elementos HTML (`id`)
+* Atributos comuns a todos os componentes do AMP (`width`, `height`, e `layout`)
+* Atributos únicos para o componente (`type` no caso do `<amp-carousel>`)
+
+#### Componente de vídeo
+``` HTML
+<amp-youtube data-videoid="BlpMQ7fMCzA" height="270" width="480" layout="responsive"></amp-youtube>
+```
+
+#### Componente de carousel
+``` HTML
+<amp-carousel width="412" height="309" layout="responsive" type="slides" loop>
+  <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631/cheddar-chaser.jpg" width="412" height="309" layout="responsive" ></amp-img>
+  <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631/cheese.jpg" width="412" height="309" layout="responsive" ></amp-img>
+  <amp-img src="https://cdn.glitch.com/d7f46a57-0ca4-4cca-ab0f-69068dec6631/mouse.jpg" width="412" height="309" layout="responsive" ></amp-img>
+</amp-carousel>
+```
+
+#### Componente de mídia social
+```HTML
+<div class="social-bar">
+  <amp-social-share class="rounded" type="email" width="44" height="44"></amp-social-share>
+  <amp-social-share class="rounded" type="linkedin" width="44" height="44"></amp-social-share>
+  <amp-social-share class="rounded" type="tumblr" width="44" height="44"></amp-social-share>
+  <amp-social-share class="rounded" type="twitter" width="44" height="44"></amp-social-share>
+</div>
+```
