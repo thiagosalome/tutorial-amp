@@ -60,3 +60,23 @@ Já no AMP, funcionaria da seguinte forma:
   </amp-accordion>
 </li>
 ```
+
+## Usando templates para dar feedback
+Os modelos/templates são uma maneira de converter dados dinâmicos (geralmente gerados a partir de um servidor) em pedaços de HTML que são inseridos na página. O tipo mais comum de modelo usado nas páginas AMP é `<amp-mustache>`.
+Por exemplo, quando dados os seguintes:
+```JSON
+{ 
+  "name" :  "Bob" , 
+  "job" :  "builder" 
+}
+```
+E o seguinte modelo:
+```HTML
+<template type="amp-mustache">
+  <p>{{name}} is an excellent {{job}}!</p>
+</template>
+```
+Resultado
+```HTML
+<p>Bob is an excellent builder!</p>
+```
